@@ -20,7 +20,6 @@ exports.basicConfig = {
     output: {
         filename: '[name].bundle.js',
         path: path.resolve(rootDir, 'dist'),
-        publicPath: path.resolve(rootDir, 'dist')
     },
     resolve: {
         extensions: ['', '.js', '.ts']
