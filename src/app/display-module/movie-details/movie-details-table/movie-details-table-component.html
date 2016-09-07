@@ -15,7 +15,7 @@
         <td>Rating:</td>
         <td>
                 <span *ngFor="let star of getStarArray(movie.rating)">
-                <i class="fa" [ngClass]="{'fa-star': star, 'fa-star-o': !star}"></i>
+                <i class="glyphicon" [ngClass]="{'glyphicon-star': star, 'glyphicon-star-empty': !star}"></i>
                 </span>
         </td>
     </tr>

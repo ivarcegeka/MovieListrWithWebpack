@@ -5,6 +5,8 @@ const path = require('path');
 const webpack = require('webpack');
 const ChunkWebpack = webpack.optimize.CommonsChunkPlugin;
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+var purify = require("purifycss-webpack-plugin");
 
 
 const rootDir = path.resolve(__dirname, '..');
@@ -54,7 +56,28 @@ module.exports = {
             inject: 'body',
             template: path.resolve(rootDir, 'src', 'index.html')
         }),
-        new ExtractTextPlugin('bundle.css')
+        new ExtractTextPlugin('styles.css'),
+        new purify({
+            basePath: __dirname,
+            paths: [
+                "src/**/*.html",
+            ]
+        }),
+        new webpack.optimize.UglifyJsPlugin({
+            minimize: true,
+            output: {
+                comments:false
+            },
+            compressor: {
+                warnings:false
+            }
+        }),
+
+        new OptimizeCssAssetsPlugin({
+            cssProcessor: require('cssnano'),
+            cssProcessorOptions: { discardComments: {removeAll: true } },
+            canPrint: true
+        })
     ],
     debug: true,
     devServer: {

@@ -5,9 +5,3 @@ import '@angular/common';
 import '@angular/router';
 
 import 'rxjs';
-
-import 'jquery';
-import 'bootstrap/dist/js/bootstrap';
-
-import 'style!bootstrap/dist/css/bootstrap.min.css';
-import 'style!font-awesome/css/font-awesome.css';
