@@ -1,0 +1,22 @@
+<table *ngIf="movie" class="table">
+    <tr>
+        <td>Name:</td>
+        <td>{{movie.name}}</td>
+    </tr>
+    <tr>
+        <td>Director:</td>
+        <td>{{movie.director}}</td>
+    </tr>
+    <tr>
+        <td>Duration:</td>
+        <td>{{movie.duration}}</td>
+    </tr>
+    <tr>
+        <td>Rating:</td>
+        <td>
+                <span *ngFor="let star of getStarArray(movie.rating)">
+                <i class="fa" [ngClass]="{'fa-star': star, 'fa-star-o': !star}"></i>
+                </span>
+        </td>
+    </tr>
+</table>

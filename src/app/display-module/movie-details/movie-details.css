@@ -1,0 +1,23 @@
+.title {
+    font-size: 36pt;
+    font-weight: bold;
+}
+
+.buttons {
+    font-size: 20pt;
+    text-align: right;
+    margin-left: 20px;
+}
+
+.buttons .fa-trash {
+    color: firebrick;
+}
+
+.buttons a {
+    text-decoration: none;
+    color: black;
+}
+
+.buttons i {
+    cursor: pointer;
+}

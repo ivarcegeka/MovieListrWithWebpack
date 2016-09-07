@@ -1,0 +1,9 @@
+<div>
+    <span class="title">Movie details</span>
+    <span class="buttons" *ngIf="movie">
+            <a [routerLink]="['/edit', movie.id]">
+                <i class="fa fa-pencil"></i>
+            </a>
+                <i class="fa fa-trash" (click)="deleteMovie(movie)"></i>
+        </span>
+</div>

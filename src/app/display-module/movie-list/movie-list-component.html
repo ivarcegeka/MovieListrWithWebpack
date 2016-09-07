@@ -1,0 +1,8 @@
+<p *ngIf="movies">{{movies.length}}</p>
+
+<ul>
+    <display-movie-list-item *ngFor="let movie of movies | async" [movie]="movie"></display-movie-list-item>
+</ul>
+<a [routerLink]="['/add']">
+    <i class="fa fa-plus"></i>
+</a>

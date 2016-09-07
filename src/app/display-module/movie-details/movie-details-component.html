@@ -1,0 +1,11 @@
+<div class="details">
+
+    <display-movie-details-title [movie]="movie | async"></display-movie-details-title>
+
+    <div *ngIf="error">
+        Couldn't find the movie you were looking for. Are you sure the URL is correct?
+    </div>
+
+    <display-movie-details-table [movie]="movie | async"></display-movie-details-table>
+
+</div>
