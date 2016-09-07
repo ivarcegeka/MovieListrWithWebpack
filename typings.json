@@ -1,7 +1,22 @@
 {
   "name": "Angular2MovieListrWebPack",
-  "dependencies": {},
   "globalDependencies": {
-    "jquery": "registry:dt/jquery#1.10.0+20160704162008"
+    "jquery": "registry:dt/jquery#1.10.0+20160704162008",
+    "node": "registry:dt/node#6.0.0+20160907103612",
+    "pouchdb": "github:DefinitelyTyped/DefinitelyTyped/pouchdb/pouchdb.d.ts#ae77424967ab0b8ddb149f0798a8e499a079c3cd",
+    "pouchdb-adapter-fruitdown": "github:DefinitelyTyped/DefinitelyTyped/pouchdb-adapter-fruitdown/pouchdb-adapter-fruitdown.d.ts#ae77424967ab0b8ddb149f0798a8e499a079c3cd",
+    "pouchdb-adapter-http": "github:DefinitelyTyped/DefinitelyTyped/pouchdb-adapter-http/pouchdb-adapter-http.d.ts#ae77424967ab0b8ddb149f0798a8e499a079c3cd",
+    "pouchdb-adapter-idb": "github:DefinitelyTyped/DefinitelyTyped/pouchdb-adapter-idb/pouchdb-adapter-idb.d.ts#ae77424967ab0b8ddb149f0798a8e499a079c3cd",
+    "pouchdb-adapter-leveldb": "github:DefinitelyTyped/DefinitelyTyped/pouchdb-adapter-leveldb/pouchdb-adapter-leveldb.d.ts#ae77424967ab0b8ddb149f0798a8e499a079c3cd",
+    "pouchdb-adapter-localstorage": "github:DefinitelyTyped/DefinitelyTyped/pouchdb-adapter-localstorage/pouchdb-adapter-localstorage.d.ts#ae77424967ab0b8ddb149f0798a8e499a079c3cd",
+    "pouchdb-adapter-memory": "github:DefinitelyTyped/DefinitelyTyped/pouchdb-adapter-memory/pouchdb-adapter-memory.d.ts#ae77424967ab0b8ddb149f0798a8e499a079c3cd",
+    "pouchdb-adapter-node-websql": "github:DefinitelyTyped/DefinitelyTyped/pouchdb-adapter-node-websql/pouchdb-adapter-node-websql.d.ts#ae77424967ab0b8ddb149f0798a8e499a079c3cd",
+    "pouchdb-adapter-websql": "github:DefinitelyTyped/DefinitelyTyped/pouchdb-adapter-websql/pouchdb-adapter-websql.d.ts#ae77424967ab0b8ddb149f0798a8e499a079c3cd",
+    "pouchdb-browser": "github:DefinitelyTyped/DefinitelyTyped/pouchdb-browser/pouchdb-browser.d.ts#ae77424967ab0b8ddb149f0798a8e499a079c3cd",
+    "pouchdb-core": "github:DefinitelyTyped/DefinitelyTyped/pouchdb-core/pouchdb-core.d.ts#ae77424967ab0b8ddb149f0798a8e499a079c3cd",
+    "pouchdb-http": "github:DefinitelyTyped/DefinitelyTyped/pouchdb-http/pouchdb-http.d.ts#ae77424967ab0b8ddb149f0798a8e499a079c3cd",
+    "pouchdb-mapreduce": "github:DefinitelyTyped/DefinitelyTyped/pouchdb-mapreduce/pouchdb-mapreduce.d.ts#ae77424967ab0b8ddb149f0798a8e499a079c3cd",
+    "pouchdb-node": "github:DefinitelyTyped/DefinitelyTyped/pouchdb-node/pouchdb-node.d.ts#ae77424967ab0b8ddb149f0798a8e499a079c3cd",
+    "pouchdb-replication": "github:DefinitelyTyped/DefinitelyTyped/pouchdb-replication/pouchdb-replication.d.ts#ae77424967ab0b8ddb149f0798a8e499a079c3cd"
   }
 }
