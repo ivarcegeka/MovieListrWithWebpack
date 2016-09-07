@@ -1,17 +1,17 @@
-'use strict';
+var exports = module.exports = {};
 
+const webpack = require('webpack');
+const sharedConfig = require('./shared.webpack');
 const HtmlWebpack = require('html-webpack-plugin');
 const path = require('path');
-const webpack = require('webpack');
 const ChunkWebpack = webpack.optimize.CommonsChunkPlugin;
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-var purify = require("purifycss-webpack-plugin");
+var CleanWebpackPlugin = require('clean-webpack-plugin');
 
 
 const rootDir = path.resolve(__dirname, '..');
 
-module.exports = {
+exports.rootDir = rootDir;
+exports.basicConfig = {
     entry: {
         app: [path.resolve(rootDir, 'src', 'app', 'main')],
         polyfills: [path.resolve(rootDir, 'src', 'app', 'polyfills')],
@@ -37,15 +37,13 @@ module.exports = {
                 test: /\.ts$/,
                 loaders: ['ts', 'angular2-template-loader'],
                 exclude: /node_modules/
-            },
-            {
-                test: /\.css$/,
-                loader: ExtractTextPlugin.extract({fallbackLoader: 'style', loader: 'css'}),
-                exclude: /src/
             }
         ]
     },
     plugins: [
+        new CleanWebpackPlugin(['dist'], {
+            'root': rootDir
+        }),
         new ChunkWebpack({
             filename: 'vendor.bundle.js',
             minChunks: Infinity,
@@ -55,34 +53,6 @@ module.exports = {
             filename: 'index.html',
             inject: 'body',
             template: path.resolve(rootDir, 'src', 'index.html')
-        }),
-        new ExtractTextPlugin('styles.css'),
-        new purify({
-            basePath: __dirname,
-            paths: [
-                "src/**/*.html",
-            ]
-        }),
-        new webpack.optimize.UglifyJsPlugin({
-            minimize: true,
-            output: {
-                comments:false
-            },
-            compressor: {
-                warnings:false
-            }
-        }),
-
-        new OptimizeCssAssetsPlugin({
-            cssProcessor: require('cssnano'),
-            cssProcessorOptions: { discardComments: {removeAll: true } },
-            canPrint: true
         })
-    ],
-    debug: true,
-    devServer: {
-        contentBase: path.resolve(rootDir, 'dist'),
-        port: 9000
-    }
+    ]
 }
-;

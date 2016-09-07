@@ -4,14 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "tslint ./src/**/*.ts",
-    "start:dev": "webpack-dev-server --config ./webpack/webpack.dev.js",
-    "start:prod": "webpack-dev-server --config ./webpack/webpack.prod.js",
-    "test": "karma start ./karma/karma.conf.js",
-    "test:headless": "karma start ./karma/karma.conf.js --browsers PhantomJS",
-    "tsc": "tsc",
-    "bundle:prod": "webpack --config webpack/webpack.prod.js",
-    "bundle:dev": "webpack --config webpack/webpack.dev.js"
+    "start:dev": "webpack-dev-server --config ./webpack/dev.webpack.js",
+    "bundle:prod": "webpack --config webpack/prod.webpack.js",
+    "bundle:dev": "webpack --config webpack/dev.webpack.js",
+    "typings": "typings install"
   },
   "keywords": [],
   "author": "",
@@ -43,6 +39,7 @@
   },
   "devDependencies": {
     "@types/core-js": "^0.9.32",
+    "clean-webpack-plugin": "^0.1.10",
     "css-loader": "^0.25.0",
     "cssnano": "^3.7.4",
     "extract-text-webpack-plugin": "^2.0.0-beta.4",
